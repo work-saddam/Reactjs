@@ -19,6 +19,7 @@ const heading = React.createElement(
 //React Element
 const jsxHeading = <h1 className="heading">React using JSX 🚀</h1>;
 // if jsx code have more than 1 line, we must have to wrap in parentheses().
+// Always wrap your jsx code in parantheses, so babel can transpitle it.
 // console.log(jsxHeading);     //it also a react element (Object)
 
 // In React, everything is COMPONENT.
@@ -27,23 +28,32 @@ const jsxHeading = <h1 className="heading">React using JSX 🚀</h1>;
     2) Functional Component - NEW Way
  */
 
-//React Functional Component:- A function that return the piece of jsx code or react element
+//React Functional Component:-  its a js function which return the piece of jsx. 
+                                // It can be react element or the component. 
   //Function name should be start with Capital Letter
-  const Title = () => (
-    <h1 className="title"> 
-      Title
-    </h1>
-  );
+  // if there is only one line inside the function component we does't have use return keyword.
+const Title = () => (
+  <h1 className="title"> 
+    Title
+  </h1>
+);
+// console.log(Title)
+
+const data = 1000;
   
-    //Component composition - combining two or more component
-  const HeadingComponent = () => {
-    return (
-      <div className="container">
-        <Title />
-        <h1 className="heading">React using Functional Component</h1>
-      </div>
-    );
-  };
+  //Component composition - combining two or more component
+const HeadingComponent = () => {
+  return (
+    <div className="container">
+    <Title />           {/* we can add component inside another component */}
+    <Title></Title>
+    {Title()}
+    {/* Above all 3 are same thing. */}
+    {data}   {/* we can also use javaScript variable inside JSX, we have to enclosed in curly braces */}
+      <h1 className="heading">React using Functional Component</h1>
+    </div>
+  );
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
