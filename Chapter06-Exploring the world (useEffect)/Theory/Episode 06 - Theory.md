@@ -51,7 +51,7 @@ useEffect(() => {})
 ## In short:-
   -If no dependency array ==> useEffect() is called on every render.
   -If dependency array was empty ==> useEffect() is called only on initial render(just once)
-  -If dependency array have some element ==> useEffect() is called every time when that element update/change.
+  -If dependency array have some element ==> useEffect() is called on initial render and also every time when that element update/change.
 
 ## Q: What is `Optional Chaining`?
 
@@ -107,6 +107,9 @@ A: `Conditional rendering` in React works the same way conditions work in `JavaS
 A: Cross-Origin Resource Sharing (CORS) is an HTTP-header based mechanism that allows a server to indicate any origins (domain, scheme, or port) other than its own from which a browser should permit loading resources.
 CORS defines a way in which a browser and server can interact to determine whether it is safe to allow the cross-origin request.
 
+For Example, if we are on website A, and website wants to get data/resource from website B. So, our browser restrict to get data & show CORS error. Because both website was on differet origin. With the help of cors website B can tell the browser that its ok to share the resource with website A.
+And we the the help of CORS we also rectrict the malicious website to use our resource.
+
 ## Q: What is `async and await`?
 
 A: `Async`: It simply allows us to write promises-based code as if it was synchronous and it checks that we are not breaking the execution thread. It operates asynchronously via the event loop. Async functions will always return a promise. It makes sure that a promise is returned and if it is not returned then JavaScript automatically wraps it in a promise which is resolved with its value.
@@ -129,5 +132,8 @@ for example:
 
 A: The `data` object, returned by the `await fetch()`, is a generic placeholder for multiple data formats.
 so we can extract the `JSON object` from a `fetch` response by using `await data.json()`.
-`data.json()` is a method on the data object that lets you extract a `JSON object` from the data or response. The method returns a promise because we have used `await` keyword.
+`data.json()` is a method on the data object that lets you extract a `JSON object` from the data or response. The method returns a promise that why we have used `await` keyword.
 so `data.json()` returns a promise resolved to a `JSON object`.
+
+1. fetch() makes the HTTP request and return a Response object(data object).
+2. data.json() reads the body of the response(data) stream and parse it as JSON.
