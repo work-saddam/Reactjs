@@ -53,6 +53,22 @@ useEffect(() => {})
   -If dependency array was empty ==> useEffect() is called only on initial render(just once)
   -If dependency array have some element ==> useEffect() is called on initial render and also every time when that element update/change.
 
+ What when we return a funtion from useEffect()
+  When you return a function from useEffect, that function runs when the component unmounts (and also just before the effect re-runs if the dependencies change).
+  Returning a function from useEffect is how you define a cleanup function. This is particularly useful for cleaning up subscriptions, timers, or event listeners when the component unmounts or before the effect runs again.
+
+```
+useEffect(() => {
+  // This runs when the component mounts or dependencies change
+
+  return () => {
+    // This runs when:
+    // 1. The component unmounts
+    // 2. Or just before running the effect again due to dependency change
+  };
+}, [/* dependencies */]);
+```
+
 ## Q: What is `Optional Chaining`?
 
 A: `Optional Chaining` (`?.`) operator accesses an object's property or calls a function. If the object accessed or function called is `undefined or null` , it returns `undefined` instead of throwing an error.
