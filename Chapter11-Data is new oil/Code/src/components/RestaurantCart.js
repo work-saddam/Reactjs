@@ -15,7 +15,7 @@ const RestaurantCart = (props) => {
           src={CDN_URL + cloudinaryImageId}
         ></img>
       </div>
-      <h3 className="text-lg font-semibold my-1 h-6 overflow-hidden">{name}</h3>
+      <h3 className="text-lg font-semibold my-1 h-7 overflow-hidden">{name}</h3>
       <span className="flex gap-4">
         <h5 className="font-medium">{avgRating + "⭐"}</h5>
         {/* <h5 className="font-medium">{costForTwo}</h5> */}
@@ -34,7 +34,7 @@ export const WithOfferLabel = (RestaurantCart) => {
     const { header, subHeader="" } = resData?.info?.aggregatedDiscountInfoV3;
     return (
       <div>
-        <label className="absolute mx-8 my-4 px-2 text-sm z-10 bg-lime-500/70 text-white rounded-sm">{header + " "+subHeader}</label>
+        <label className="absolute mx-8 my-4 px-2 text-sm z-10 bg-lime-600/70 text-white rounded-sm">{header + " "+subHeader}</label>
         <RestaurantCart {...props} />
       </div>
     );

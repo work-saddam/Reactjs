@@ -1,13 +1,19 @@
 import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
-import { CDN_URL } from "../utils/constants";
 import useRestrauntMenu from "../utils/useRestrauntMenu";
+import RestaurantCategory from "./RestaurantCategory";
+import { useEffect } from "react";
 
 const RestaurantMenu = () => {
 
+  useEffect(() => {
+  // Scrolls to top 
+  window.scrollTo(0, 0);
+}, []);
+
   const { resId } = useParams();
 
-  const resInfo = useRestrauntMenu(resId)
+  const resInfo = useRestrauntMenu(resId);
 
   if (resInfo === null) return <Shimmer />;
 
@@ -16,35 +22,26 @@ const RestaurantMenu = () => {
   const { itemCards } =
     resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[1]?.card?.card;
 
+  const categories =
+    resInfo?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards.filter(
+      (c) =>
+        c?.card?.card?.["@type"] ===
+        "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+    );
+  // console.log(categories);
+
   return (
-    <div className="restaurant-menu">
-      <div className="res-name">
-        <img src={CDN_URL + cloudinaryImageId}></img>
-        <div className="res-summary">
-          <h1>{name}</h1>
-          <h3>{cuisines.join(", ")}</h3>
-          <h3>{costForTwoMessage}</h3>
-          <h3>{avgRating} stars</h3>
-        </div>
+    <div className="max-w-3xl mx-auto my-5 px-2">
+      <div className="mb-4">
+        <h1 className="text-3xl font-bold mb-3">{name}</h1>
+        <h3 className="font-semibold mb-1"> {avgRating}⭐ ● {costForTwoMessage}</h3>
+        <h3 className="mb-8">{cuisines.join(", ")}</h3>
       </div>
       <div className="res-menu">
-        <h2>Recommended</h2>
-        <div className="menu-list">
-          {itemCards.map((item) => (
-            <div className="menu-item" key={item?.card?.info?.id}>
-              <div className="menu-summary">
-                <h3>{item?.card?.info?.name}</h3>
-                <h4>
-                  ₹  
-                  {Math.floor(item?.card?.info?.price / 100) ||
-                    Math.floor(item?.card?.info?.defaultPrice / 100)}
-                </h4>
-                <p>{item?.card?.info?.description}</p>
-              </div>
-              <img src={CDN_URL + item?.card?.info?.imageId}></img>
-            </div>
-          ))}
-        </div>
+        <hr></hr>
+        {categories.map((category) => (
+          <RestaurantCategory key={category?.card?.card?.categoryId} data={category?.card?.card}/>
+        ))}
       </div>
     </div>
   );
