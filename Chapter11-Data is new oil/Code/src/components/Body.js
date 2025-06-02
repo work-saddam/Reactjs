@@ -1,10 +1,11 @@
 import RestaurantCart, { WithOfferLabel } from "./RestaurantCart";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { SWIGGY_API } from "../utils/constants";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
 import { SWIGGY_API } from "../utils/constants";
 import useOnlineStatus from "../utils/useOnlineStatus";
+import UserContext from "../utils/UserContext";
 
 const Body = () => {
   //whenever the state variable is update, react re-render the components.
@@ -13,6 +14,7 @@ const Body = () => {
   const [searchText, setSearchText] = useState("");
 
   const RestaurantCartOffer = WithOfferLabel(RestaurantCart);
+  const { loggedInUser, setUserName } = useContext(UserContext);
 
   useEffect(() => {
     fetchData();
@@ -84,6 +86,16 @@ const Body = () => {
           >
             Top Rated Restaurant
           </button>
+        </div>
+        <div className="flex items-center mx-2 mt-4 sm:mt-0">
+          <label>UserName: </label>
+          <input
+            className="border border-black mx-2 p-1 rounded-sm"
+            value={loggedInUser}
+            onChange={(e) => {
+              setUserName(e.target.value)
+            }}
+          ></input>
         </div>
       </div>
       <div className="flex flex-wrap justify-center">

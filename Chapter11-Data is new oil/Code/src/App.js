@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,6 +9,7 @@ import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Shimmer from "./components/Shimmer";
+import UserContext from "./utils/UserContext";
 
 /**
 Lazy loading is a optimization technique where an object or resource is not loaded until it's actually needed.
@@ -25,11 +26,23 @@ This helps improve performance, reduce memory usage, and speed up initial loadin
 const Grocery = lazy(() => import("./components/Grocery"));
 
 const AppLayout = () => {
+  const [userName, setUserName] = useState();
+
+  useEffect(() => {
+    // Authentication done and get the username
+    const data = {
+      name: "Alex",
+    };
+    setUserName(data.name);
+  },[]);
+
   return (
     <div className="app">
-      <Header />
-      <Outlet />
-      <Footer/>
+      <UserContext.Provider value={{loggedInUser: userName, setUserName}}>
+        <Header />
+        <Outlet />
+        <Footer />
+      </UserContext.Provider>
     </div>
   );
 };
@@ -54,7 +67,7 @@ const appRouter = createBrowserRouter([
       {
         path: "/grocery",
         element: (
-          <Suspense fallback={<Shimmer/>}>
+          <Suspense fallback={<Shimmer />}>
             <Grocery />
           </Suspense>
         ),
