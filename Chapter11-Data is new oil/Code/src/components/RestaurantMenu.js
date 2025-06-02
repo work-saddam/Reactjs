@@ -2,14 +2,15 @@ import { useParams } from "react-router-dom";
 import Shimmer from "./Shimmer";
 import useRestrauntMenu from "../utils/useRestrauntMenu";
 import RestaurantCategory from "./RestaurantCategory";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const RestaurantMenu = () => {
+  const [showIndex, setShowIndex] = useState(0);
 
   useEffect(() => {
-  // Scrolls to top 
-  window.scrollTo(0, 0);
-}, []);
+    // Scrolls to top
+    window.scrollTo(0, 0);
+  }, []);
 
   const { resId } = useParams();
 
@@ -34,13 +35,21 @@ const RestaurantMenu = () => {
     <div className="max-w-3xl mx-auto my-5 px-2">
       <div className="mb-4">
         <h1 className="text-3xl font-bold mb-3">{name}</h1>
-        <h3 className="font-semibold mb-1"> {avgRating}⭐ ● {costForTwoMessage}</h3>
+        <h3 className="font-semibold mb-1">
+          {" "}
+          {avgRating}⭐ ● {costForTwoMessage}
+        </h3>
         <h3 className="mb-8">{cuisines.join(", ")}</h3>
       </div>
       <div className="res-menu">
         <hr></hr>
-        {categories.map((category) => (
-          <RestaurantCategory key={category?.card?.card?.categoryId} data={category?.card?.card}/>
+        {categories.map((category, index) => (
+          <RestaurantCategory
+            key={category?.card?.card?.categoryId}
+            data={category?.card?.card}
+            showItems={index === showIndex ? true : false}
+            setShowIndex={()=>setShowIndex(showIndex === index ?null :index)}
+          />
         ))}
       </div>
     </div>
