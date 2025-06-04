@@ -36,3 +36,15 @@ Alternatives to Props Drilling:-
 
 *In this chapter to avoid props drilling we use `react context`.*
 https://react.dev/learn/passing-data-deeply-with-context
+
+
+#### React Context
+
+React Context is a feature in React that allows you to share data across your component tree without having to pass props down manually at every level.
+
+🧠 When to Use React Context
+Use Context when you have global data that many components need access to, such as:
+  - Theme (dark/light mode)
+  - Authenticated user
+  - Language settings (i18n)
+  - App settings or config
