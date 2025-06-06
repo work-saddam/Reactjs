@@ -14,7 +14,6 @@ const Header = () => {
 
   // Selector to subscribing the store
   const cartItems = useSelector((store) => store.cart.items)
-  console.log(cartItems)
 
   return (
     <div className="flex justify-between shadow-md h-16 sm:h-20">
@@ -39,7 +38,7 @@ const Header = () => {
             <Link to={"/grocery"}>Grocery</Link>
           </li>
           <li className="px-2 sm:px-4 hover:tracking-wide hover:font-medium">
-            Cart ({cartItems.length})
+            <Link to={"/cart"}>Cart ({cartItems.length})</Link>
           </li>
           <button
             className="hidden sm:block px-4 py-1 bg-gray-100 rounded-lg hover:bg-gray-200 hover:px-6 transition-all duration-300 ease-in-out"

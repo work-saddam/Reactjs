@@ -21,7 +21,7 @@ Redux offers easy debugging.
 
 ### Redux Data Flow
 
-![working of redux store](./src/utils/Images/image.png)
+![working of redux store](./Code/src/utils/Images/image.png)
 
 #### Writing to the Store
 1. User clicks a button
@@ -39,5 +39,4 @@ Redux offers easy debugging.
   - Actions – plain objects that describe what happened.
   - Reducers – pure functions that update state based on actions.
   - Selectors – retrieve parts of the state.
-  - Middleware – intercepts actions (e.g. for async logic like API calls).
 
