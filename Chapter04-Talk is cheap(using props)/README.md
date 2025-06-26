@@ -15,4 +15,4 @@
             - `Render` your cards with dynamic data of restaurants
             - Use `Array.map` to render all the restaurants
 
-Live app till now. [🚀Food-Chapter04](food-chapter04.netlify.app) 
+Live app till now. [🚀Food-Chapter04](https://food-chapter04.netlify.app/) 
