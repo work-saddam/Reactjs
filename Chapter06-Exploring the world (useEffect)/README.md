@@ -12,3 +12,4 @@
 - Make `Search functionality` work.
 - Make a `Login Logout` button that toggles with a state.
 
+🔥Live project till now. [🚀Food-Chapter06](https://food-chapter06.netlify.app/)
