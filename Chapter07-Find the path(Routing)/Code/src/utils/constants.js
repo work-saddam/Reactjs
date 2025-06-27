@@ -5,4 +5,4 @@ export const LOGO_URL =
   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7qrUdpkljtKeYLOrV353LSEAuu7oNLrZyN35_fgDgxdh1ixbspLlhKPs&s";
 
 export const MENU_API =
-  "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=13.0365983&lng=80.2147026&restaurantId=";
+  "https://food-reactjs-server.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=13.0365983&lng=80.2147026&restaurantId=";
