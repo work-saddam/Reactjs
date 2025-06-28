@@ -6,3 +6,5 @@
 - Install Tailwind and Postcss.
 - Configure the tailwind.
 - Start writing tailwind css from scratch.
+
+🔥Live project till now. [🚀Food-Chapter10](https://food-chapter10.netlify.app/)
