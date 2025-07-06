@@ -4,12 +4,20 @@
 
 *In this chapter, we will use @reduxjs/toolkit & react-redux which is the newer way of wrtting redux.* 
 
-- Install @reduxjs/toolkit and react-redux.
-- Build our store.
-- Connect our store to our app.
-- Slice (cartSlice).
-- dispatch(action).
-- Selector
+- npm install -D  @reduxjs/toolkit
+- npm install react-redux
+
+1. configureStore in appStore.js
+2. createSlice in newFile.js
+3. add slice reducer to the appStore
+4. Provide the store to the root level with store={appStore}
+
+- for add/delete from redux store:-
+  const dispatch = useDispatch()
+  dispatch(action())
+
+- for get the data from redux store:-
+  const variable = use useSelector(store => store.sliceName)
 
 
 ## Redux
