@@ -100,6 +100,29 @@ Root Project/
 - 💻 [_Source Code_](./Chapter08-Lets%20get%20classy%20%28Class%20component%29/Code)
 - [🚀 Live Demo 😍](https://food-chapter08.netlify.app/)
 
+## 📚 [_Chapter 09 - Optimizing our App_](./Chapter09-Optimising%20our%20app/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter09-Optimising%20our%20app/Theory/Episode%2009%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter09-Optimising%20our%20app/Code/)
+- [🚀 Live Demo 😍](https://food-chapter09.netlify.app/)
+
+## 📚 [_Chapter 10 - Tailwind_](./Chapter10-Tailwind/)
+
+- 💻 [_Source Code_](./Chapter10-Tailwind/Code/)
+- [🚀 Live Demo 😍](https://food-chapter10.netlify.app/)
+
+## 📚 [_Chapter 11 - Data is new oil_](./Chapter11-Data%20is%20new%20oil/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter11-Data%20is%20new%20oil/#theory)
+- 💻 [_Source Code_](./Chapter11-Data%20is%20new%20oil/Code/)
+- [🚀 Live Demo 😍](https://food-chapter11.netlify.app/)
+
+## 📚 [_Chapter 12 - Lets build our store (Redux)_](./Chapter12-Lets%20build%20our%20store%20%28Redux%29/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter12-Lets%20build%20our%20store%20%28Redux%29/#redux)
+- 💻 [_Source Code_](./Chapter12-Lets%20build%20our%20store%20%28Redux%29/Code)
+- [🚀 Live Demo 😍](https://food-reactjss.netlify.app/)
+
 
 ## 🔗 Connect
 
