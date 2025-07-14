@@ -55,6 +55,50 @@ Root Project/
 
 ```
 
+## 📚 [_Chapter 01 - Inception_](./Chapter01-Inception/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter01-Inception/Theory/Chapter01%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter01-Inception/code/)
+
+## 📚 [_Chapter 02 - Igniting our App_](./Chapter02-Igniting%20our%20app/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter02-Igniting%20our%20app/Theory/Episode%2002%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter02-Igniting%20our%20app/Code/)
+
+## 📚 [_Chapter 03 - Laying the Foundation_](./Chapter03-Laying%20the%20foundation/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter03-Laying%20the%20foundation/Theory/Episode%2003%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter03-Laying%20the%20foundation/Code/)
+
+## 📚 [_Chapter 04 - Talk is Cheap, show me the code_](./Chapter04-Talk%20is%20cheap(using%20props)/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter04-Talk%20is%20cheap(using%20props)/Theory/Episode%2004%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter04-Talk%20is%20cheap(using%20props)/Code/)
+- [🚀 Live Demo 😍](https://food-chapter04.netlify.app/)
+
+## 📚 [_Chapter 05 - Hookes (useState())_](./Chapter05-%20Hookes%20%28useState()%29/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter05-%20Hookes%20%28useState()%29/Theory/Episode%2005%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter05-%20Hookes%20%28useState()%29/Code)
+- [🚀 Live Demo 😍](https://food-chapter05.netlify.app/)
+
+## 📚 [_Chapter 06 - Exploring the world (useEffect())_](./Chapter06-Exploring%20the%20world%20(useEffect)/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter06-Exploring%20the%20world%20(useEffect)/Theory/Episode%2006%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter06-Exploring%20the%20world%20(useEffect)/Code)
+- [🚀 Live Demo 😍](https://food-chapter06.netlify.app/)
+
+## 📚 [_Chapter 07 - Finding the Path(Routing)_](./Chapter07-Find%20the%20path%28Routing%29/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter07-Find%20the%20path%28Routing%29/Theory/Episode%2007%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter07-Find%20the%20path%28Routing%29/Code)
+- [🚀 Live Demo 😍](https://food-chapter07.netlify.app/)
+
+## 📚 [_Chapter 08 - Finding the Path(Routing)_](./Chapter08-Lets%20get%20classy%20%28Class%20component%29/)
+
+- 📖 [_Theory Assignment Solution_](./Chapter08-Lets%20get%20classy%20(Class%20component)/Theory/Episode%2008%20-%20Theory.md)
+- 💻 [_Source Code_](./Chapter08-Lets%20get%20classy%20%28Class%20component%29/Code)
+- [🚀 Live Demo 😍](https://food-chapter08.netlify.app/)
 
 
 ## 🔗 Connect
