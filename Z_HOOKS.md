@@ -69,3 +69,62 @@ Use the useContext hook in any child component:
 ```
 const theme = useContext(ThemeContext);
 ```
+
+## useRef()
+The useRef hook in React is a built-in hook that provides a way to create a mutable reference that persists across component renders, without causing re-renders when its value changes. It returns a plain JavaScript object with a single property, current, which can hold any mutable value.
+
+```
+const input = useRef(null);
+```
+
+### Difference between state and ref
+A ref is similar to state, in that, we can hold and mutate values to be used in a component. However, unlike state, mutation of a ref does not trigger a re-render. This makes useRef suitable for storing mutable values that need to persist across renders without causing the component to re-render.
+
+
+## useMemo()
+The useMemo hook is a built-in hook used for memoization.
+
+Think of memoization as caching a value so that it does not need to be recalculated.
+
+It is an optimization technique to improve the performance of functional components. It allows us to cache the result of an expensive calculation so that it is not re-computed on every re-render of the component, unless its dependencies change.
+
+```
+const value = useMemo(() => expensiveCalculation(), []);
+```
+
+useMemo accepts two arguments:
+- A callback function that performs the expensive computation and returns the value we want to memoize.
+- A dependency array (similar to useEffect).
+
+#### ⚠️ Best Practices
+- Don’t overuse useMemo — memoization is a heavy task.
+- Use only when necessary (e.g., noticeable slowdowns or object reference stability).
+- Always provide a dependency array; omitting it means recomputing on every render.
+
+## useCallback()
+useCallback is a React Hook that memoizes a function definition, preventing its re-creation on every render of a component unless its dependencies change. This is primarily used for performance optimization.
+
+Preventing unnecessary re-renders of child components:
+
+When a parent component re-renders, any functions defined within it are re-created, leading to new function references. If these functions are passed as props to child components, the child components might re-render unnecessarily because they detect a new prop (the function reference) even if the function's logic hasn't conceptually changed. useCallback ensures the same function instance is returned across renders as long as its dependencies remain the same.
+
+```
+const memoizedCallback = useCallback(() => {
+    // Function logic
+}, [dependencies]);
+```
+
+useCallback accepts two arguments:
+- callback: The function you want to memoize.
+- A dependency array (similar to useEffect).
+
+## useMemo() vs useCallback()
+The useCallback and useMemo Hooks are similar. The main difference is that useMemo returns a memoized value and useCallback returns a memoized function.
+
+| Feature           | `useMemo`                                    | `useCallback`                                      |
+| ----------------- | -------------------------------------------- | -------------------------------------------------- |
+| **Purpose**       | Memoize a **value**                          | Memoize a **function**                             |
+| **Returns**       | The **result** of a function                 | The **function itself**                            |
+| **Use Case**      | Avoid recalculating expensive values         | Prevent re-creating functions between renders      |
+| **Typical Usage** | Calculated values (filtering, sorting, etc.) | Function props passed to memoized child components |
+| **Common Pair**   | `useMemo(() => expensiveFn(), [deps])`       | `useCallback(() => handlerFn(), [deps])`           |
