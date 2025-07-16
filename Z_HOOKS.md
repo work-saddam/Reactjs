@@ -1,3 +1,17 @@
+## React
+ReactJS is a component-based JavaScript library used to build dynamic and interactive user interfaces. It simplifies the creation of single-page applications (SPAs).It is developed and maintained by Facebook. It uses the concept of virtual DOM for faster updates.
+
+## React Component
+In React, a component is an independent, reusable building block that defines a piece of the user interface (UI). Component allowing developers to break down complex UIs into smaller, manageable, and self-contained units making code easier to understand, test, and maintain. 
+
+React components follow the DRY principle (Don’t Repeat Yourself), which means you can reuse logic and UI elements without having to rewrite the same code repeatedly.
+
+## Library vs Framework
+1. A library gives us the freedom to structure our app as we like, while a framework provides a predefined structure for building the app.
+
+2. In a library, the control flow is in our hands — we decide when and how to call the library functions.
+In a framework, the control flow is managed by the framework — it calls our code when needed.
+
 # React Hooks
 React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. With the help of hooks we can manage the state, handle side effects (like API calls), and perform many other tasks.
 
@@ -10,6 +24,10 @@ There are multiple hooks provided by react such as:
 - useCallback: Memoizes a callback function so it doesn't get recreated on every render.
 - useReducer: An alternative to useState for complex state logic.
 - useLayoutEffect: Similar to useEffect, but runs synchronously after all DOM mutations.
+
+## Custom Hooks
+Custom Hooks in React are JavaScript functions that allow for the extraction the reusable logic from functional components. These hook can share logic between components without repeating code.
+It is best practice to start the hook name with the word "use". It is not mandatory.
 
 ## useState()
 useState hooks is used to create a statefull variable in a functional component. It take initial state as an argument and returns an array of two entries. 1st was current state value and 2nd a function to update that value.

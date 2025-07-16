@@ -123,6 +123,7 @@ Root Project/
 - 💻 [_Source Code_](./Chapter12-Lets%20build%20our%20store%20%28Redux%29/Code)
 - [🚀 Live Demo 😍](https://food-reactjss.netlify.app/)
 
+## 🔥 [Hooks](./Z_HOOKS.md)
 
 ## 🔗 Connect
 
