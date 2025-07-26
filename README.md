@@ -94,7 +94,7 @@ Root Project/
 - 💻 [_Source Code_](./Chapter07-Find%20the%20path%28Routing%29/Code)
 - [🚀 Live Demo 😍](https://food-chapter07.netlify.app/)
 
-## 📚 [_Chapter 08 - Finding the Path(Routing)_](./Chapter08-Lets%20get%20classy%20%28Class%20component%29/)
+## 📚 [_Chapter 08 - Lets get classy(Class based Component)_](./Chapter08-Lets%20get%20classy%20%28Class%20component%29/)
 
 - 📖 [_Theory Assignment Solution_](./Chapter08-Lets%20get%20classy%20(Class%20component)/Theory/Episode%2008%20-%20Theory.md)
 - 💻 [_Source Code_](./Chapter08-Lets%20get%20classy%20%28Class%20component%29/Code)
