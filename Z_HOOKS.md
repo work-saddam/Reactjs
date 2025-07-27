@@ -146,3 +146,13 @@ The useCallback and useMemo Hooks are similar. The main difference is that useMe
 | **Use Case**      | Avoid recalculating expensive values         | Prevent re-creating functions between renders      |
 | **Typical Usage** | Calculated values (filtering, sorting, etc.) | Function props passed to memoized child components |
 | **Common Pair**   | `useMemo(() => expensiveFn(), [deps])`       | `useCallback(() => handlerFn(), [deps])`           |
+
+
+## React19 Features
+More Info: [https://www.youtube.com/watch?v=hiiGUjEkzbM&list=PLIJrr73KDmRw-T8bdJn3XxVMbH-zlooKb](https://www.youtube.com/watch?v=hiiGUjEkzbM&list=PLIJrr73KDmRw-T8bdJn3XxVMbH-zlooKb)
+
+#### React Compiler
+It automatically optimizes React code eliminating the need for manual memoization hooks like useMemo and useCallback. Transforms React code into efficient JavaScript under the hood.
+
+#### Server Components
+ React 19 introduces Server Components, allowing components to be rendered on the server before being sent to the client. This can significantly improve initial page load times and enhance Search Engine Optimization (SEO). 
