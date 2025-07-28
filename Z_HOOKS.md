@@ -174,4 +174,10 @@ More Info: [https://www.youtube.com/watch?v=hiiGUjEkzbM&list=PLIJrr73KDmRw-T8bdJ
 It automatically optimizes React code eliminating the need for manual memoization hooks like useMemo and useCallback. Transforms React code into efficient JavaScript under the hood.
 
 #### Server Components
- React 19 introduces Server Components, allowing components to be rendered on the server before being sent to the client. This can significantly improve initial page load times and enhance Search Engine Optimization (SEO). 
+React 19 introduces Server Components, allowing components to be rendered on the server before being sent to the client. This can significantly improve initial page load times and enhance Search Engine Optimization (SEO). 
+
+ #### use API
+use API designed to read the value of resources like Promises or context within the render function.
+React will Suspend the component where you can show the loader/shimmerUI using fallback, until the promise resolves. This allows for cleaner and more concise code when dealing with asynchronous data fetching or state management.
+
+useFormStatus(), useFormState(), useOptimistic()
