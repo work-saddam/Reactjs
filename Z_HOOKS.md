@@ -148,6 +148,25 @@ The useCallback and useMemo Hooks are similar. The main difference is that useMe
 | **Common Pair**   | `useMemo(() => expensiveFn(), [deps])`       | `useCallback(() => handlerFn(), [deps])`           |
 
 
+## useReducer()
+[https://react.dev/reference/react/useReducer](https://react.dev/reference/react/useReducer)
+
+useReducer is a powerful alternative to useState for managing state in functional components, especially when dealing with complex state logic or when the next state depends on the previous one.
+It take  reducer function and an initialState as arguments, and return an array of two entries.
+1st was the current state and 2nd dispatch function.
+```
+const [state, dispatch] = useReducer(reducer, initialState);
+```
+- state: represents the current value and is set to the initialState value during the initial render.
+- dispatch: is a function that updates the state value and always triggers a re-render, just like the updater function in useState.
+- reducer: is a function that holds all the logic of how the state gets updated. It takes state and action as arguments and returns the next state.
+- initialState: holds the initial value and can be of any type.
+
+Advantages:-
+1. isolate state change logic from component to seprate file.
+2. Better testability because it is in seprate file.
+
+
 ## React19 Features
 More Info: [https://www.youtube.com/watch?v=hiiGUjEkzbM&list=PLIJrr73KDmRw-T8bdJn3XxVMbH-zlooKb](https://www.youtube.com/watch?v=hiiGUjEkzbM&list=PLIJrr73KDmRw-T8bdJn3XxVMbH-zlooKb)
 
