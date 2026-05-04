@@ -181,3 +181,12 @@ use API designed to read the value of resources like Promises or context within 
 React will Suspend the component where you can show the loader/shimmerUI using fallback, until the promise resolves. This allows for cleaner and more concise code when dealing with asynchronous data fetching or state management.
 
 useFormStatus(), useFormState(), useOptimistic()
+
+What is the virtual DOM and how does React use it?
+Explain useState and useEffect with examples.
+What are props vs state?
+What is lifting state up?
+Explain React component lifecycle.
+What is useContext and when would you use it?
+What is React Router and how do you implement protected routes?
+What are controlled vs uncontrolled components?
